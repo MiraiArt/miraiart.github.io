@@ -1,0 +1,108 @@
+---
+layout: default
+title: "Getting started"
+---
+
+<h1 class="text-center text-purple">Getting started</h1>
+
+<h4 class="text-center text-purple">Download</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple">
+        <p>Mirai Art can be installed in your project in different ways.</p>
+        <p>Jquery is required for Miraiart for working properly and moment.js is just required for Datetimepicker.</p>
+    </blockquote>
+</div>
+
+<div class="form-row text-center">
+    <a class="btn bg-blue">Github&nbsp;&nbsp;<i class="fab fa-github-square"></i></a>
+    <a class="btn bg-red">NPM&nbsp;&nbsp;<i class="fab fa-npm"></i></a>
+    <a class="btn bg-orange">CDN</a>
+    <a class="btn bg-green">Direct Download&nbsp;&nbsp;<i class="fas fa-download"></i></a>
+</div>
+
+<h4 class="text-center text-purple">HTML example</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple">
+        <p>Setting up the html page with MiraiAirt by using CDN or embedding files into your project</p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#tab1">Html</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#tab2">With CDN</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="tab1" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+                    &lt;!DOCTYPE html>
+                    &lt;html>
+                    
+                        &lt;head>
+                            &lt;meta charset="UTF-8">
+                            &lt;title>MiraiArt&lt;/title>
+                            &lt;meta content="width=device-width, initial-scale=1" name="viewport">
+
+                            &lt;!--Import mirai-art.css -->
+                            &lt;link rel="stylesheet" type="text/css" href="css/mirai-art.min.css">
+                        &lt;/head>
+                    
+                        &lt;body>
+
+                            &lt;!-- Jquery is required for working -->
+                            &lt;script type="text/javascript" src="js/jquery-3.4.1.min.js">&lt;/script>
+
+                            &lt;!-- Moment.js is required for Datetimepicker -->
+                            &lt;script type="text/javascript" src="js/moment.min.js">&lt;/script>
+                            
+                            &lt;!--Import mirai-art.js -->
+                            &lt;script type="text/javascript" src="js/mirai-art.min.js">&lt;/script>
+                        &lt;/body>
+                    
+                    &lt;/html>
+                </code>
+            </pre>
+        </div>
+
+        <div id="tab2" class="tab-body-content">
+            <pre class="language-markup line-numbers">
+                <code>
+                    &lt;!DOCTYPE html>
+                    &lt;html>
+                    
+                        &lt;head>
+                            &lt;meta charset="UTF-8">
+                            &lt;title>MiraiArt&lt;/title>
+                            &lt;meta content="width=device-width, initial-scale=1" name="viewport">
+                            
+                            &lt;!--Import mirai-art.css -->
+                            &lt;link rel="stylesheet" type="text/css" href="{{CDN Link}}">
+                        &lt;/head>
+                    
+                        &lt;body>
+
+                            &lt;!-- Jquery is required for working -->
+                            &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">&lt;/script>
+
+                            &lt;!-- Moment.js is required for Datetimepicker -->
+                            &lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.j">&lt;/script>
+                            
+                            &lt;!--Import mirai-art.js -->
+                            &lt;script type="text/javascript" src="{{CDN Link}}">&lt;/script>
+                        &lt;/body>
+                    
+                    &lt;/html>
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+

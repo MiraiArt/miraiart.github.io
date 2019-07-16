@@ -1,0 +1,123 @@
+---
+layout: default
+title: "Component - Dropdown"
+---
+
+<h1 class="text-center text-purple">Dropdown</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple">
+        <p>Dropdown can be used for show and hide a selectable list of link for example</p>
+        <p>If you want to change button background color of dropdown you can use <code class="language-markup">bg-*</code> class.</p>
+        <p>And for change size of button use the class <code class="language-markup">btn-small</code> or <code class="language-markup">btn-large</code>.</p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+    <div class="dropdown">
+        <a class="btn btn-dropdown btn-large bg-black" href="javascript:void(0);">Dropdown large</a>
+        <ul class="dropdown-list">
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 1</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 2</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 3</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="dropdown">
+        <a class="btn btn-dropdown bg-red" href="javascript:void(0);">Dropdown normal</a>
+        <ul class="dropdown-list">
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 1</a></li>
+            <li class="dropdown-item"><a class="dropdown-link active" href="#">Item 2</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 3</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="dropdown">
+        <a class="btn btn-dropdown btn-small bg-blue" href="javascript:void(0);">Dropdown small</a>
+        <ul class="dropdown-list">
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 1</a></li>
+            <li class="dropdown-item"><a class="dropdown-link disabled" href="#">Item 2</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 3</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="form-row">
+    <div class="dropdown">
+        <a class="btn btn-dropdown btn-small bg-green disabled" href="javascript:void(0);">Dropdown disabled</a>
+        <ul class="dropdown-list">
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 1</a></li>
+            <li class="dropdown-item"><a class="dropdown-link disabled" href="#">Item 2</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 3</a></li>
+            <li class="dropdown-item"><a class="dropdown-link" href="#">Item 4</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">HTML</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Dropdown large -->
+                    &lt;div class="dropdown">
+                        &lt;a class="btn btn-dropdown btn-large bg-black" href="javascript:void(0);">Dropdown large&lt;/a>
+                        &lt;ul class="dropdown-list">
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 1&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 2&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 3&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 4&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                
+                    &lt;!-- Dropdown normal with a activated item -->
+                    &lt;div class="dropdown">
+                        &lt;a class="btn btn-dropdown bg-red" href="javascript:void(0);">Dropdown normal&lt;/a>
+                        &lt;ul class="dropdown-list">
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 1&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link active" href="#">Item 2&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 3&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 4&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                    
+                    &lt;!-- Dropdown small with a disabled item -->
+                    &lt;div class="dropdown">
+                        &lt;a class="btn btn-dropdown btn-small bg-blue" href="javascript:void(0);">Dropdown small&lt;/a>
+                        &lt;ul class="dropdown-list">
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 1&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link disabled" href="#">Item 2&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 3&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 4&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+                
+                    &lt;!-- Dropdown disabled -->
+                    &lt;div class="dropdown">
+                        &lt;a class="btn btn-dropdown btn-small bg-green disabled" href="javascript:void(0);">Dropdown disabled&lt;/a>
+                        &lt;ul class="dropdown-list">
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 1&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link disabled" href="#">Item 2&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 3&lt;/a>&lt;/li>
+                            &lt;li class="dropdown-item">&lt;a class="dropdown-link" href="#">Item 4&lt;/a>&lt;/li>
+                        &lt;/ul>
+                    &lt;/div>
+
+
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+</div>
