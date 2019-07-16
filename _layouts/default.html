@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MiraiArt | {{ page.title }}</title>
+    <link rel="icon" type="image/png" href="/img/logo.png" />
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mirai-art.css">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="header-nav header-wrap-m bg-purple">
+        <ul class="header-menu">
+            <li class="header-item header-item-no-hover hide-elem-l">
+                <a class="btn bg-black btn-mobile" data-target="sidenav" data-href="#frameworkSidenav"
+                    href="javascript:void(0);"><i class="fas fa-bars"></i></a>
+            </li>
+            <li class="header-item header-item-no-hover img-logo-ctn hide-elem-l">
+                <img class="img-logo" src="/img/logo.png">
+            </li>
+        </ul>
+    </header>
+
+    <!-- END Header -->
+
+    <!-- Sidenav -->
+
+    <nav id="frameworkSidenav" class="sidenav MA-sidenav bg-purple sidenav-fixed">
+        <div class="sidenav-head">
+            <a class="sidenav-logo" href="#"><img src="/img/logo-text.png"></a>
+        </div>
+        <div class="sidenav-body">
+            <ul class="sidenav-menu">
+                <li class="sidenav-item p-15 input-search-container"><input type="text" class="input-field search-page"
+                        placeholder="Search"></li>
+                <li class="sidenav-item searcheable"><a class="sidenav-link" href="#">About</a></li>
+                <li class="sidenav-item searcheable"><a class="sidenav-link" href="#">News</a></li>
+                <li class="sidenav-item searcheable"><a class="sidenav-link" href="#">Getting Started</a></li>
+                <li class="sidenav-item sidenav-submenu-ctn">
+                    <a class="sidenav-link" href="javascript:void(0);">Components</a>
+                    <ul class="sidenav-submenu">
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="dropdown.html">Dropdown</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Badge</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Breadcrumb</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">List style</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Progress bar / Loader</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Button</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Table</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Card</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Media</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Tabs</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Accordion</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Toast</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Modal</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Alert</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Tooltip</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Scroll Top</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Scroll Spy</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item sidenav-submenu-ctn">
+                    <a class="sidenav-link" href="javascript:void(0);">Page</a>
+                    <ul class="sidenav-submenu">
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Header</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Sidenav</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Grid</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Footer</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item sidenav-submenu-ctn">
+                    <a class="sidenav-link" href="javascript:void(0);">Utilities</a>
+                    <ul class="sidenav-submenu">
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Typographie</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Darktheme</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Padding / Margin</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Clearfix / Float</a></li>
+                    </ul>
+                </li>
+                <li class="sidenav-item sidenav-submenu-ctn">
+                    <a class="sidenav-link" href="javascript:void(0);">Form</a>
+                    <ul class="sidenav-submenu">
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Input / Textarea</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Select</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Checkbox / Radio</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Switch</a></li>
+                        <li class="searcheable"><a class="sidenav-submenu-link" href="#">Datepicker / Timepicker</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidenav-foot">
+            <ul>
+                <li class="sidenav-item"><a class="sidenav-link" href="">Support</a></li>
+                <li class="sidenav-item"><a class="sidenav-link" href="">MIT License</a></li>
+                <li class="sidenav-item"><a class="sidenav-link disabled" href="javascript:void(0);">© 2019 - MiraiArt -
+                        All
+                        rights reserved
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- END Sidenav -->
+
+    <!-- Body -->
+
+    <div class="wrapper p-top-right-left-30">{{content}}</div>
+
+    <!-- END Body -->
+
+
+
+    <script type="text/javascript" src="/js/mirai-art.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+
+</html>
