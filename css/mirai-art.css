@@ -2549,6 +2549,10 @@ textarea.input-field{
     color: var(--dark-grey);
 }
 
+.breadcrumb-list .breadcrumb-item a{
+    color: var(--dark-grey);
+}
+
 .breadcrumb-list .breadcrumb-item:after{
     content: "/";
     padding: 0 10px;
