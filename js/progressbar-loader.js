@@ -17,6 +17,6 @@ $('.btn-toggle-page-loader').on('click', () => {
     $('.page-loader').fadeIn();
     setTimeout(() => {
         $('.page-loader').fadeOut();
-    }, 1000);
+    }, 2000);
 });
 

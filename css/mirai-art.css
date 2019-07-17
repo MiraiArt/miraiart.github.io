@@ -3257,6 +3257,7 @@ textarea.input-field{
     animation: loader-rotate 1s linear infinite;
     width: 50px;
     height: 50px;
+    margin: auto;
 }
 
 @keyframes loader-rotate {
