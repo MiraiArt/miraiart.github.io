@@ -2964,6 +2964,8 @@ textarea.input-field{
     padding: 5px 10px;
     background-color: var(--darken-grey);
     border: 1px solid var(--darken-grey);
+    display: inline-block;
+    margin: 3px;
 }
 
 /* --- FOOTER --- */
