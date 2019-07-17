@@ -3,8 +3,6 @@ var animateProgressBar = ()=>{
         transitionDuration: 1000,
         startAt: '0%',
         endAt: '100%',
-        onStart: function () { console.log(this) },
-        onEnd: function () { console.log(this) },
         hideAtEnd: true
     });
 };
