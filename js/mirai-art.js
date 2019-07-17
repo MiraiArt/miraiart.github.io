@@ -1381,3 +1381,4 @@ $('.MA-switch').MA_Switch();
 $('.MAtooltip').MA_Tooltip();
 $('.MA-accordion').MA_Accordion();
 $('.MA-inputCount').MA_InputCount();
+$('.MA-progress').MA_InputCount();
