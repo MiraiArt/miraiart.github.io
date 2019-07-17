@@ -127,7 +127,6 @@ img{
 
 body{
     overflow: auto;
-    transition: padding .3s;
 }
 
 a{
