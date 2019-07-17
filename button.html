@@ -13,7 +13,7 @@ title: "Component - Button"
 
 <h4 class="text-center text-purple">Color</h4>
 
-<div class="form-row">
+<div class="form-row text-center">
     <a class="btn" href="#">Button default</a>
     <a class="btn bg-orange" href="#">Button orange</a>
     <a class="btn bg-red" href="#">Button red</a>
@@ -26,39 +26,18 @@ title: "Component - Button"
 
 <h4 class="text-center text-purple">Size</h4>
 
-<div class="form-row">
+<div class="form-row text-center">
     <a class="btn bg-pink btn-small" href="#">Button small</a>
     <a class="btn bg-black" href="#">Button normal</a>
     <a class="btn bg-green btn-large" href="#">Button large</a>
 </div>
 
-<div class="form-row">
-    <ul class="list">
-        <li class="list-item bg-blue">Item 1</li>
-        <li class="list-item">Item 2</li>
-        <li class="list-item bg-blue">Item 3</li>
-        <li class="list-item">Item 4</li>
-    </ul>
-</div>
+<h4 class="text-center text-purple">Disabled / Active</h4>
 
-<div class="form-row">
-    <ul class="list border-green">
-        <li class="list-item">Item 1</li>
-        <li class="list-item">Item 2</li>
-        <li class="list-item">Item 3</li>
-        <li class="list-item">Item 4</li>
-    </ul>
+<div class="form-row text-center">
+    <a class="btn bg-black disabled" href="#">Button disabled</a>
+    <a class="btn bg-purple active" href="#">Button active</a>
 </div>
-
-<div class="form-row">
-    <ul class="list">
-        <li class="list-item border-red">Item 1</li>
-        <li class="list-item">Item 2</li>
-        <li class="list-item border-red">Item 3</li>
-        <li class="list-item">Item 4</li>
-    </ul>
-</div>
-
 
 <div class="form-row">
 
@@ -68,53 +47,24 @@ title: "Component - Button"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Default List style -->
-                    &lt;ul class="list">
-                        &lt;li class="list-item">Item 1&lt;/li>
-                        &lt;li class="list-item">Item 2&lt;/li>
-                        &lt;li class="list-item">Item 3&lt;/li>
-                        &lt;li class="list-item">Item 4&lt;/li>
-                    &lt;/ul>
+                    &lt;!-- Button color -->
+                    &lt;a class="btn" href="#">Button default&lt;/a>
+                    &lt;a class="btn bg-orange" href="#">Button orange&lt;/a>
+                    &lt;a class="btn bg-red" href="#">Button red&lt;/a>
+                    &lt;a class="btn bg-pink" href="#">Button pink&lt;/a>
+                    &lt;a class="btn bg-purple" href="#">Button purple&lt;/a>
+                    &lt;a class="btn bg-blue" href="#">Button blue&lt;/a>
+                    &lt;a class="btn bg-green" href="#">Button green&lt;/a>
+                    &lt;a class="btn bg-black" href="#">Button black&lt;/a>
 
-                    &lt;!-- List style full background color -->
-                    &lt;div class="form-row">
-                        &lt;ul class="list bg-pink">
-                            &lt;li class="list-item">Item 1&lt;/li>
-                            &lt;li class="list-item">Item 2&lt;/li>
-                            &lt;li class="list-item">Item 3&lt;/li>
-                            &lt;li class="list-item">Item 4&lt;/li>
-                        &lt;/ul>
-                    &lt;/div>
+                    &lt;!-- Button size -->
+                    &lt;a class="btn bg-pink btn-small" href="#">Button small &lt;/a>
+                    &lt;a class="btn bg-black" href="#">Button normal &lt;/a>
+                    &lt;a class="btn bg-green btn-large" href="#">Button large &lt;/a>
                     
-                    &lt;!-- Background color on item of list -->
-                    &lt;div class="form-row">
-                        &lt;ul class="list">
-                            &lt;li class="list-item bg-blue">Item 1&lt;/li>
-                            &lt;li class="list-item">Item 2&lt;/li>
-                            &lt;li class="list-item bg-blue">Item 3&lt;/li>
-                            &lt;li class="list-item">Item 4&lt;/li>
-                        &lt;/ul>
-                    &lt;/div>
-                    
-                    &lt;!-- List style full border color -->
-                    &lt;div class="form-row">
-                        &lt;ul class="list border-green">
-                            &lt;li class="list-item">Item 1&lt;/li>
-                            &lt;li class="list-item">Item 2&lt;/li>
-                            &lt;li class="list-item">Item 3&lt;/li>
-                            &lt;li class="list-item">Item 4&lt;/li>
-                        &lt;/ul>
-                    &lt;/div>
-                    
-                    &lt;!-- Border color on item of list -->
-                    &lt;div class="form-row">
-                        &lt;ul class="list">
-                            &lt;li class="list-item border-red">Item 1&lt;/li>
-                            &lt;li class="list-item">Item 2&lt;/li>
-                            &lt;li class="list-item border-red">Item 3&lt;/li>
-                            &lt;li class="list-item">Item 4&lt;/li>
-                        &lt;/ul>
-                    &lt;/div>
+                    &lt;!-- Button disabled / active -->
+                    &lt;a class="btn bg-black disabled" href="#">Button disabled&lt;/a>
+                    &lt;a class="btn bg-purple active" href="#">Button active&lt;/a>
                     
                 </code>
             </pre>
