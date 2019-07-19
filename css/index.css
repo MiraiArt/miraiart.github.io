@@ -1,3 +1,7 @@
 pre{
     white-space: pre!important;
 }
+
+.blockquote .language-markup{
+    background-color: var(--dark-grey);
+}

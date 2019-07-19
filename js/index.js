@@ -17,7 +17,7 @@ $('.search-page').on('input',(e) => {
         searchContainer.append($('#frameworkSidenav .searcheable').clone(true).removeClass('searcheable'));
         searchContainer.find('.sidenav-link').removeClass('sidenav-link').addClass('sidenav-submenu-link');
 
-        $('#frameworkSidenav .sidenav-body .sidenav-item:not(.input-search-container)').removeAttr('style').css('display', 'none');
+        $('#frameworkSidenav .sidenav-body .sidenav-item').removeAttr('style').css('display', 'none');
     }
 
     $('#frameworkSidenav .search-container li').filter(function () {
