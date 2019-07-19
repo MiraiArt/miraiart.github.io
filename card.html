@@ -6,12 +6,12 @@ title: "Component - Card"
 <h1 class="text-center text-purple">Card</h1>
 
 <div class="form-row">
-    <blockquote class="blockquote border-purple">
+    <blockquote class="blockquote border-purple m-bottom-15">
         <p></p>
     </blockquote>
 </div>
 
-<h4 class="text-center text-purple">Color</h4>
+<h4 class="text-center text-purple">Colored card</h4>
 
 <div class="form-row">
     <div class="card">
@@ -33,7 +33,34 @@ title: "Component - Card"
     </div>
 </div>
 
-<h4 class="text-center text-purple">Background img</h4>
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">HTML</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Colored card -->
+                    &lt;div class="card">
+                        &lt;div class="card-head bg-blue text-center">Card title&lt;/div>
+                        &lt;div class="card-body">
+                            ...
+                        &lt;/div>
+                        &lt;div class="card-foot bg-blue text-right">
+                            &lt;button class="btn">Cancel&nbsp;&lt;i class="fas fa-times">&lt;/i>&lt;/button>
+                            &lt;button class="btn bg-blue">Save&nbsp;&lt;i class="fas fa-save">&lt;/i>&lt;/button>
+                        &lt;/div>
+                    &lt;/div>
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<h4 class="text-center text-purple">Background image</h4>
 
 <div class="form-row">
     <div class="card bg-pink">
@@ -55,7 +82,36 @@ title: "Component - Card"
     </div>
 </div>
 
-<h4 class="text-center text-purple">Img</h4>
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">HTML</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Card with background image -->
+                    &lt;div class="card bg-pink">
+                        &lt;div class="card-img card-img-cover">
+                            &lt;div class="img-cover" style="background-image: url(https://via.placeholder.com/1920x1080)">&lt;/div>
+                        &lt;/div>
+                        &lt;div class="card-body">
+                            ...
+                        &lt;/div>
+                        &lt;div class="card-foot text-right">
+                            &lt;button class="btn bg-black btn-reponsive-s">Cancel&nbsp;&lt;i class="fas fa-times">&lt;/i>&lt;/button>
+                            &lt;button class="btn bg-blue btn-reponsive-s">Save&nbsp;&lt;i class="fas fa-save">&lt;/i>&lt;/button>
+                        &lt;/div>
+                    &lt;/div>
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<h4 class="text-center text-purple">Image</h4>
 
 <div class="form-row">
     <div class="card">
@@ -82,34 +138,8 @@ title: "Component - Card"
         <div class="card-body">
             <pre class="language-markup line-numbers">
                 <code>
-
-                    &lt;!-- Color -->
-                    &lt;div class="card">
-                        &lt;div class="card-head bg-blue text-center">Card title&lt;/div>
-                        &lt;div class="card-body">
-                            ...
-                        &lt;/div>
-                        &lt;div class="card-foot bg-blue text-right">
-                            &lt;button class="btn">Cancel&nbsp;&lt;i class="fas fa-times">&lt;/i>&lt;/button>
-                            &lt;button class="btn bg-blue">Save&nbsp;&lt;i class="fas fa-save">&lt;/i>&lt;/button>
-                        &lt;/div>
-                    &lt;/div>
-
-                    &lt;!-- Background img -->
-                    &lt;div class="card bg-pink">
-                        &lt;div class="card-img card-img-cover">
-                            &lt;div class="img-cover" style="background-image: url(https://via.placeholder.com/1920x1080)">&lt;/div>
-                        &lt;/div>
-                        &lt;div class="card-body">
-                            ...
-                        &lt;/div>
-                        &lt;div class="card-foot text-right">
-                            &lt;button class="btn bg-black btn-reponsive-s">Cancel&nbsp;&lt;i class="fas fa-times">&lt;/i>&lt;/button>
-                            &lt;button class="btn bg-blue btn-reponsive-s">Save&nbsp;&lt;i class="fas fa-save">&lt;/i>&lt;/button>
-                        &lt;/div>
-                    &lt;/div>
                     
-                    &lt;!-- Button disabled / active -->
+                    &lt;!-- Card with image -->
                     &lt;div class="card">
                         &lt;div class="card-img">
                             &lt;img src="https://via.placeholder.com/1920x1080">
@@ -126,6 +156,5 @@ title: "Component - Card"
             </pre>
         </div>
     </div>
-
 
 </div>

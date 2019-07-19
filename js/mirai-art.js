@@ -398,9 +398,9 @@
             var _imgElems = $(_thisElem);
         }
         
-        _imgElems.addClass('img-zoom');
-
-        _imgElems.on('click', () => { imgZoomDisplayEvent(event.currentTarget, settings, _imgElems) });
+        $(_thisElem).addClass('img-zoom');
+        
+        $(_thisElem).on('click', () => { imgZoomDisplayEvent(event.currentTarget, settings, _imgElems) });
 
     };
 
@@ -425,8 +425,8 @@
             arrowLeft.on('click', () => { imgZoomToSlideEvent(event.currentTarget, settings) });
             arrowRight.on('click', () => { imgZoomToSlideEvent(event.currentTarget, settings) });
             
-            imgZoomSlider.append(arrowLeft);
-            imgZoomSlider.append(arrowRight);
+            imgZoomContainer.append(arrowLeft);
+            imgZoomContainer.append(arrowRight);
 
         }
 

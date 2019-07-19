@@ -6,7 +6,7 @@ title: "Component - Card"
 <h1 class="text-center text-purple">Card</h1>
 
 <div class="form-row">
-    <blockquote class="blockquote border-purple">
+    <blockquote class="blockquote border-purple m-bottom-15">
         <p></p>
     </blockquote>
 </div>
@@ -14,7 +14,7 @@ title: "Component - Card"
 <h4 class="text-center text-purple">Img zoom</h4>
 
 <div class="form-row">
-    <img class="img-zoom" src="https://via.placeholder.com/1920x1080" data-description="MiraiArt image description">
+    <img class="img-zoom-one" src="https://via.placeholder.com/1920x1080" data-description="MiraiArt image description">
 </div>
 
 <div class="form-row">
@@ -31,7 +31,7 @@ title: "Component - Card"
                 <code>
 
                     &lt;!-- Img -->
-                    &lt;img class="img-zoom" src="https://via.placeholder.com/1920x1080" data-description="MiraiArt image description">
+                    &lt;img class="img-zoom-one" src="https://via.placeholder.com/1920x1080" data-description="MiraiArt image description">
 
                 </code>
             </pre>
@@ -41,12 +41,68 @@ title: "Component - Card"
             <pre class="language-javascript line-numbers">
                 <code>
                     //Load ImgZoom
-                    $('.img-zoom').MA_imgZoom({
+                    $('.img-zoom-one').MA_imgZoom({
                         button: {
                             close: {
                                 name: '&lt;i class="fas fa-times">&lt;/i>',
                             }
                         }
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<h4 class="text-center text-purple">Img zoom group</h4>
+
+<div class="form-row text-center">
+    <img class="img-zoom-group" data-group="imgZoom" src="https://via.placeholder.com/1700x980" data-description="MiraiArt image description image 1">
+    <img class="img-zoom-group" data-group="imgZoom" src="https://via.placeholder.com/320x280" data-description="MiraiArt image description image 2">
+</div>
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#tab1">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#tab2">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="tab1" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Img -->
+                    &lt;img class="img-zoom-group" data-group="imgZoom" src="https://via.placeholder.com/1700x980" data-description="MiraiArt image description image 1">
+                    &lt;img class="img-zoom-group" data-group="imgZoom" src="https://via.placeholder.com/320x280" data-description="MiraiArt image description image 2">
+
+                </code>
+            </pre>
+        </div>
+
+        <div id="tab2" class="tab-body-content">
+            <pre class="language-javascript line-numbers">
+                <code>
+                    //Load ImgZoom group
+                    $('.img-zoom-group').MA_imgZoom({
+                        button: {
+                        arrowLeft: {
+                            name: '<i class="fas fa-arrow-left"></i>',
+                            class: 'bg-blue',
+                        },
+                        arrowRight: {
+                            name: '<i class="fas  fa-arrow-right"></i>',
+                            class: 'bg-blue',
+                        },
+                        close: {
+                            name: '<i class="fas fa-times"></i>',
+                            class: 'bg-blue',
+                        }
+                    }
                     });
                 </code>
             </pre>
