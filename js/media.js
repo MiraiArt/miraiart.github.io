@@ -3,6 +3,7 @@ $(function () {
         button: {
             close: {
                 name: '<i class="fas fa-times"></i>',
+                class: 'bg-blue',
             }
         }
     });
