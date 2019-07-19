@@ -14,24 +14,44 @@ title: "Component - Card"
 <h4 class="text-center text-purple">Img zoom</h4>
 
 <div class="form-row">
-    <img class="MA-imgZoom" src="https://via.placeholder.com/1920x1080">
+    <img class="img-zoom" src="https://via.placeholder.com/1920x1080">
 </div>
 
 <div class="form-row">
 
-    <div class="card">
-        <div class="card-head bg-orange">HTML</div>
-        <div class="card-body">
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#tab1">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#tab2">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="tab1" class="tab-body-content show">
             <pre class="language-markup line-numbers">
                 <code>
+                    &lt;!-- Img -->
+                    <img class="img-zoom" src="https://via.placeholder.com/1920x1080">
 
-                    &lt;!-- Color -->
-                    
                 </code>
             </pre>
         </div>
-    </div>
 
+        <div id="tab2" class="tab-body-content">
+            <pre class="language-javascript line-numbers">
+                <code>
+                    //Load ImgZoom
+                    $('.img-zoom').MA_imgZoom({
+                        button: {
+                            close: {
+                                name: '<i class="fas fa-times"></i>',
+                            }
+                        }
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
 
 </div>
 
