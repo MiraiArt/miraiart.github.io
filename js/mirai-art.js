@@ -16,15 +16,15 @@
         var defaults = {
             button : {
                 arrowLeft: {
-                    name: '<i class="fal fa-arrow-left"></i>',
+                    name: 'Prev',
                     class: 'bg-blue',
                 },
                 arrowRight: {
-                    name: '<i class="fal fa-arrow-right"></i>',
+                    name: 'Next',
                     class: 'bg-blue',
                 },
                 close: {
-                    name: '<i class="fal fa-times"></i>',
+                    name: 'Close',
                     class: 'bg-blue',
                 }
             }
