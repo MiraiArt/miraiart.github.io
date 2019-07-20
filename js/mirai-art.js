@@ -452,9 +452,11 @@
             
             
             var img = $('<img src="' + $(this).attr('src') + '"/>');
-            var imgDescription = $('<div class="img-zoom-description">' + $(this).attr('data-description') + '</div>');
+            var imgWrapper = $('<div class="img-zoom-img-wrapper"></div>')
+            var imgDescription = $('<div class="img-zoom-description"><p>' + $(this).attr('data-description') + '</p></div>');
 
-            imgSlide.append(img);
+            imgWrapper.append(img)
+            imgSlide.append(imgWrapper);
             
             if ($(this).attr('data-description')){
                 imgSlide.append(imgDescription);
