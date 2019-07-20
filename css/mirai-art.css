@@ -130,6 +130,7 @@ body{
 }
 
 a{
+    -webkit-tap-highlight-color: transparent!important;
     color: var(--dark-blue);
 }
 
