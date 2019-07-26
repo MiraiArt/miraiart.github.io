@@ -1,0 +1,53 @@
+---
+layout: default
+title: "Component - Toast"
+---
+
+<h1 class="text-center text-purple">Toast</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+<h4 class="text-center text-purple">Colored toast</h4>
+
+<div class="form-row text-center">
+
+    <a class="btn bg-blue btn-show-toast">Show toast</a>
+
+</div>
+
+
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">JS</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+                    
+                    $.MA_Toast({
+                        message: 'Do you want to go at home page ?',
+                        icon: '&lt;i class="fas fa-exclamation-triangle">&lt;/i>',
+                        class: 'bg-blue',
+                        closeable: true,
+                        toastClose: {
+                            name: '&lt;i class="fas fa-times">&lt;/i>',
+                        },
+                        toastBtn: {
+                            name: 'Go to homepage',
+                            href: 'index.html',
+                            action: function () {
+                            }
+                        }
+                    });
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/toast.js"></script>

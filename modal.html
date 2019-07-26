@@ -1,0 +1,174 @@
+---
+layout: default
+title: "Component - Modal"
+---
+
+<h1 class="text-center text-purple">Modal</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+<h4 class="text-center text-purple">Colored toast</h4>
+
+<div class="form-row text-center">
+    <a class="btn bg-black" data-target="modal" data-href="#modalExample" href="javascript:void(0);">Show modal</a>
+</div>
+
+
+<div id="modalExample" class="modal-background">
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-head bg-blue">
+                <h5 class="modal-title">Modal title</h5>
+                <a class="modal-close" href="javascript:void(0);"><i class="fas fa-times"></i></a>
+            </div>
+            <div class="modal-body">
+                In volutpat, nunc a rutrum elementum, urna tortor suscipit felis, id dignissim nibh ante eu eros. Proin quam orci,
+                blandit vel magna et, semper iaculis ex. Morbi dictum nibh nisl, non tempus nibh fringilla quis. Donec eget ipsum
+                volutpat, pellentesque metus et, efficitur ex. Suspendisse vitae posuere quam, in lacinia velit. Donec dictum fermentum
+                ex, sed luctus diam ullamcorper vitae. Ut augue odio, malesuada vitae lectus nec, tristique dictum nulla. Vestibulum
+                lacinia tempus ultricies. Donec vitae semper lorem. Donec erat ex, ornare in faucibus nec, tristique at dolor. Aliquam
+                erat volutpat.
+                
+                Etiam quis quam congue, posuere nisl ut, laoreet erat. Nullam nec leo posuere, efficitur mi in, vulputate tellus.
+                Curabitur vulputate arcu turpis, mollis consectetur magna feugiat fringilla. In tristique dignissim sodales. Donec
+                ornare nec purus in sodales. Mauris non tempus ligula. Suspendisse blandit pharetra lectus. Ut commodo massa sit amet
+                lorem venenatis hendrerit. Sed varius ullamcorper metus vitae hendrerit. Cras bibendum, purus tempus porttitor faucibus,
+                nunc nunc tincidunt lorem, nec blandit augue ante et mauris. Suspendisse tristique turpis sed sapien condimentum
+                placerat in in urna. In hac habitasse platea dictumst. Nunc erat arcu, auctor sed euismod sed, sagittis ut nisi. Fusce
+                dignissim nulla id urna ornare, at vestibulum purus pellentesque.
+                
+                Pellentesque fermentum, mi at imperdiet pharetra, ante neque mollis justo, et tempus ligula felis sed nibh. Vestibulum
+                sed dignissim purus, sed lobortis enim. Aliquam a odio arcu. In vel efficitur felis. Donec non pretium dui, et dignissim
+                lorem. Quisque vel elit at orci feugiat tempor. Morbi ornare eros a velit convallis egestas. Cras facilisis hendrerit
+                enim congue placerat.
+                
+                Etiam a augue vulputate lacus vestibulum ornare malesuada at odio. Duis ut mollis orci. Ut mollis, ante at pulvinar
+                pulvinar, augue mi pellentesque diam, et feugiat sem purus id magna. Proin vitae maximus ante. Quisque eu erat
+                convallis, egestas velit et, placerat elit. Vestibulum viverra, dui nec aliquam tristique, felis mi facilisis velit, eu
+                vestibulum mi ipsum at turpis. Proin sodales, quam eu imperdiet dictum, massa ante vehicula nibh, ut cursus mauris est a
+                turpis. Quisque rutrum mauris quis massa finibus rutrum. Orci varius natoque penatibus et magnis dis parturient montes,
+                nascetur ridiculus mus. Aliquam quis porttitor sem. Sed sit amet faucibus eros, id maximus enim. Nam nisi velit,
+                vehicula non ultrices in, convallis sollicitudin libero. Maecenas pharetra tempor est, ut mollis dolor auctor eu. Morbi
+                at orci eget mi consectetur sollicitudin. Phasellus eleifend sapien eget est venenatis, in tristique dui egestas. Aenean
+                suscipit hendrerit risus nec sodales.
+            </div>
+            <div class="modal-foot">
+                <a class="btn bg-black modal-close">Close</a>
+                <a class="btn bg-blue">Save</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#html">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#js">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="html" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Modal -->
+                    &lt;div id="modalExample" class="modal-background">
+                        &lt;div class="modal-container">
+                            &lt;div class="modal">
+                                &lt;div class="modal-head bg-blue">
+                                    &lt;h5 class="modal-title">Modal title&lt;/h5>
+                                    &lt;a class="modal-close" href="javascript:void(0);">&lt;i class="fas fa-times">&lt;/i>&lt;/a>
+                                &lt;/div>
+                                &lt;div class="modal-body">
+                                    In volutpat, nunc a rutrum elementum, urna tortor suscipit felis, id dignissim nibh ante eu eros. Proin
+                                    quam orci,
+                                    blandit vel magna et, semper iaculis ex. Morbi dictum nibh nisl, non tempus nibh fringilla quis. Donec
+                                    eget ipsum
+                                    volutpat, pellentesque metus et, efficitur ex. Suspendisse vitae posuere quam, in lacinia velit. Donec
+                                    dictum fermentum
+                                    ex, sed luctus diam ullamcorper vitae. Ut augue odio, malesuada vitae lectus nec, tristique dictum
+                                    nulla. Vestibulum
+                                    lacinia tempus ultricies. Donec vitae semper lorem. Donec erat ex, ornare in faucibus nec, tristique at
+                                    dolor. Aliquam
+                                    erat volutpat.
+                    
+                                    Etiam quis quam congue, posuere nisl ut, laoreet erat. Nullam nec leo posuere, efficitur mi in,
+                                    vulputate tellus.
+                                    Curabitur vulputate arcu turpis, mollis consectetur magna feugiat fringilla. In tristique dignissim
+                                    sodales. Donec
+                                    ornare nec purus in sodales. Mauris non tempus ligula. Suspendisse blandit pharetra lectus. Ut commodo
+                                    massa sit amet
+                                    lorem venenatis hendrerit. Sed varius ullamcorper metus vitae hendrerit. Cras bibendum, purus tempus
+                                    porttitor faucibus,
+                                    nunc nunc tincidunt lorem, nec blandit augue ante et mauris. Suspendisse tristique turpis sed sapien
+                                    condimentum
+                                    placerat in in urna. In hac habitasse platea dictumst. Nunc erat arcu, auctor sed euismod sed, sagittis
+                                    ut nisi. Fusce
+                                    dignissim nulla id urna ornare, at vestibulum purus pellentesque.
+                    
+                                    Pellentesque fermentum, mi at imperdiet pharetra, ante neque mollis justo, et tempus ligula felis sed
+                                    nibh. Vestibulum
+                                    sed dignissim purus, sed lobortis enim. Aliquam a odio arcu. In vel efficitur felis. Donec non pretium
+                                    dui, et dignissim
+                                    lorem. Quisque vel elit at orci feugiat tempor. Morbi ornare eros a velit convallis egestas. Cras
+                                    facilisis hendrerit
+                                    enim congue placerat.
+                    
+                                    Etiam a augue vulputate lacus vestibulum ornare malesuada at odio. Duis ut mollis orci. Ut mollis, ante
+                                    at pulvinar
+                                    pulvinar, augue mi pellentesque diam, et feugiat sem purus id magna. Proin vitae maximus ante. Quisque
+                                    eu erat
+                                    convallis, egestas velit et, placerat elit. Vestibulum viverra, dui nec aliquam tristique, felis mi
+                                    facilisis velit, eu
+                                    vestibulum mi ipsum at turpis. Proin sodales, quam eu imperdiet dictum, massa ante vehicula nibh, ut
+                                    cursus mauris est a
+                                    turpis. Quisque rutrum mauris quis massa finibus rutrum. Orci varius natoque penatibus et magnis dis
+                                    parturient montes,
+                                    nascetur ridiculus mus. Aliquam quis porttitor sem. Sed sit amet faucibus eros, id maximus enim. Nam
+                                    nisi velit,
+                                    vehicula non ultrices in, convallis sollicitudin libero. Maecenas pharetra tempor est, ut mollis dolor
+                                    auctor eu. Morbi
+                                    at orci eget mi consectetur sollicitudin. Phasellus eleifend sapien eget est venenatis, in tristique dui
+                                    egestas. Aenean
+                                    suscipit hendrerit risus nec sodales.
+                                &lt;/div>
+                                &lt;div class="modal-foot">
+                                    &lt;a class="btn bg-black modal-close">Close&lt;/a>
+                                    &lt;a class="btn bg-blue">Save&lt;/a>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+
+                </code>
+            </pre>
+        </div>
+        <div id="js" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init modal
+                    $('#modalExample').MA_Modal({
+                        beforeOpen: function () {
+                        },
+                        afterOpen: function () {
+                        },
+                        beforeClose: function () {
+                        },
+                        afterClose: function () {
+                        },
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/modal.js"></script>

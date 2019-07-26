@@ -1,0 +1,147 @@
+---
+layout: default
+title: "Component - Accordion"
+---
+
+<h1 class="text-center text-purple">Accordion</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+<h4 class="text-center text-purple">Default accordion</h4>
+
+<div class="form-row">
+
+    <div class="accordion accordion-not-close">
+        <div class="accordion-item active">
+            <div class="accordion-head bg-purple">Accordion 1</div>
+            <div class="accordion-body">Accordion body 1</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-head bg-purple disabled">Accordion 2</div>
+            <div class="accordion-body">Accordion body 2</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-head bg-purple">Accordion 3</div>
+            <div class="accordion-body">Accordion body 3</div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#html">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#js">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="html" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Default accordion -->
+                    &lt;div class="accordion accordion-not-close">
+                        &lt;div class="accordion-item active">
+                            &lt;div class="accordion-head bg-purple">Accordion 1&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 1&lt;/div>
+                        &lt;/div>
+                        &lt;div class="accordion-item">
+                            &lt;div class="accordion-head bg-purple disabled">Accordion 2&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 2&lt;/div>
+                        &lt;/div>
+                        &lt;div class="accordion-item">
+                            &lt;div class="accordion-head bg-purple">Accordion 3&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 3&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+
+                </code>
+            </pre>
+        </div>
+        <div id="js" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init default accordion
+                    $('.accordion-not-close').MA_Accordion();
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<h4 class="text-center text-purple">Auto-close accordion</h4>
+
+<div class="form-row">
+
+    <div class="accordion accordion-close">
+        <div class="accordion-item">
+            <div class="accordion-head bg-red">Accordion 1</div>
+            <div class="accordion-body">Accordion body 1</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-head bg-red">Accordion 2</div>
+            <div class="accordion-body">Accordion body 2</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-head bg-red">Accordion 3</div>
+            <div class="accordion-body">Accordion body 3</div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#html">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#js">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="html" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Auto-close accordion -->
+                    &lt;div class="accordion accordion-close">
+                        &lt;div class="accordion-item">
+                            &lt;div class="accordion-head bg-red">Accordion 1&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 1&lt;/div>
+                        &lt;/div>
+                        &lt;div class="accordion-item">
+                            &lt;div class="accordion-head bg-red">Accordion 2&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 2&lt;/div>
+                        &lt;/div>
+                        &lt;div class="accordion-item">
+                            &lt;div class="accordion-head bg-red">Accordion 3&lt;/div>
+                            &lt;div class="accordion-body">Accordion body 3&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+
+                </code>
+            </pre>
+        </div>
+        <div id="js" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init auto-close accordion
+                    $('.accordion-close').MA_Accordion({ closeOtherItem: true });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/accordion.js"></script>

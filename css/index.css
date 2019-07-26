@@ -5,3 +5,7 @@ pre{
 .blockquote .language-markup{
     background-color: var(--dark-grey);
 }
+
+.body-content{
+    min-height: 85vh;
+}
