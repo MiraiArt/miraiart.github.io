@@ -110,6 +110,7 @@
             classFoot: '',
             transitionDuration: 500,
             backgroundClose: false,
+            closeIcon: '<i class="fas fa-times" ></i>',
             closeBtn: false,
             buttons: {}
             /* buttons: {
@@ -770,7 +771,7 @@
 
         if (settings.closeBtn){
 
-            var alertClose = $('<a href="javascript:void(0);" class="alert-close"><i class="fal fa-times"></i></a>');
+            var alertClose = $('<a href="javascript:void(0);" class="alert-close">' + settings.closeIcon +'</a>');
             alertHead.append(alertClose);
 
             alertClose.on('click', function (event) { alertCloseEvent(this, alertBackground, settings) });
@@ -1071,7 +1072,7 @@
 
 
         var tooltipX = event.pageX - 8;
-        var tooltipY = event.pageY + 8;
+        var tooltipY = event.pageY + 15;
 
         tooltip.css({ top: tooltipY, left: tooltipX });
 
@@ -1088,7 +1089,7 @@
         var tooltip = $('.tooltip-msg');
 
         var tooltipX = event.pageX - 8;
-        var tooltipY = event.pageY + 8;
+        var tooltipY = event.pageY + 15;
 
         tooltip.css({ top: tooltipY, left: tooltipX });
 

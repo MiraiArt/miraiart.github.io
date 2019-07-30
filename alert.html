@@ -1,0 +1,62 @@
+---
+layout: default
+title: "Component - Alert"
+---
+
+<h1 class="text-center text-purple">Alert</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+<h4 class="text-center text-purple">Colored Alert</h4>
+
+<div class="form-row text-center">
+
+    <a class="btn bg-blue btn-show-alert">Show Alert</a>
+
+</div>
+
+
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">JS</div>
+        <div class="card-body">
+            <pre class="language-js line-numbers">
+                <code>
+                    
+                    //Init alert
+                    $.MA_Alert({
+                        message: 'Le champs est invalide.&lt;br>Veuillez entré une valeur .',
+                        title: '&lt;i class="fal fa-exclamation-triangle">&lt;/i> Attention !',
+                        classContainer: 'dqz',
+                        classBackground: '',
+                        classHead: 'bg-purple',
+                        backgroundClose: false,
+                        closeBtn: true,
+                        closeIcon: '&lt;i class="fab fa-times">&lt;/i>',
+                        buttons: {
+                            btnClose: {
+                            class: 'bg-blue',
+                            name:'dqzdq',
+                            action: function () {
+                            }
+                        },
+                        btnRemove: {
+                            class: 'bg-red',
+                            action: function () {
+                            }
+                            }
+                        }
+                    });
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/alert.js"></script>
