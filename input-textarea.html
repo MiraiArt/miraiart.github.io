@@ -1,0 +1,353 @@
+---
+layout: default
+title: "Component - Input / Textarea"
+---
+
+<h1 class="text-center text-purple">Input / Textarea</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<h4 class="text-center text-purple">Default input</h4>
+
+<div class="row">
+
+    <div class="col col-n12 col-l6">
+        <div class="form-row">
+            <label>Username</label>
+            <input class="input-field" placeholder="Enter your username" type="text"/>
+        </div>
+    </div>
+
+    <div class="col col-n12 col-l6">
+        <div class="form-row">
+            <label>Password</label>
+            <input class="input-field" placeholder="Enter your password" type="password"/>
+        </div>
+    </div>
+
+    <div class="col col-n12">
+        <div class="form-row">
+            <div class="flex-group">
+                <button class="btn bg-purple"><i class="fas fa-search"></i></button>
+                <input class="input-field" placeholder="Search" type="text"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-n12">
+        <div class="form-row">
+            <div class="flex-group">
+                <input class="input-field" type="text"/>
+                <button class="btn bg-purple">Button</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <div class="flex-group">
+                <input class="input-field bg-purple" placeholder="Purple input" type="text"/>
+                <input class="input-field" placeholder="Default input" type="text"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <div class="flex-group">
+                <a class="btn bg-pink">Button</a>
+                <input class="input-field" placeholder="Placeholder" type="text" />
+                <button class="btn bg-pink">Button</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <div class="flex-group">
+                <button class="btn bg-pink">Button</button>
+                <textarea placeholder="Textarea" class="input-field"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <input class="input-field" disabled placeholder="Disabled" type="text"/>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">HTML</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+                    
+                    &lt;!-- Input with label -->
+                    &lt;div class="row">
+                    
+                        &lt;div class="col col-n12 col-l6">
+                            &lt;div class="form-row">
+                                &lt;label>Username&lt;/label>
+                                &lt;input class="input-field" placeholder="Enter your username" type="text" />
+                            &lt;/div>
+                        &lt;/div>
+                    
+                        &lt;div class="col col-n12 col-l6">
+                            &lt;div class="form-row">
+                                &lt;label>Password&lt;/label>
+                                &lt;input class="input-field" placeholder="Enter your password" type="password" />
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input group with one button -->
+                    
+                        &lt;div class="col col-n12">
+                            &lt;div class="form-row">
+                                &lt;div class="flex-group">
+                                    &lt;button class="btn bg-purple">&lt;i class="fas fa-search">&lt;/i>&lt;/button>
+                                    &lt;input class="input-field" placeholder="Search" type="text" />
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+                    
+                        &lt;div class="col col-n12">
+                            &lt;div class="form-row">
+                                &lt;div class="flex-group">
+                                    &lt;input class="input-field" type="text" />
+                                    &lt;button class="btn bg-purple">Button&lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input group with two input -->
+                    
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;div class="flex-group">
+                                    &lt;input class="input-field bg-purple" placeholder="Purple input" type="text" />
+                                    &lt;input class="input-field" placeholder="Default input" type="text" />
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input group with two button -->
+                    
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;div class="flex-group">
+                                    &lt;a class="btn bg-pink">Button&lt;/a>
+                                    &lt;input class="input-field" placeholder="Placeholder" type="text" />
+                                    &lt;button class="btn bg-pink">Button&lt;/button>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input group textarea -->
+                    
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;div class="flex-group">
+                                    &lt;button class="btn bg-pink">Button&lt;/button>
+                                    &lt;textarea placeholder="Textarea" class="input-field">&lt;/textarea>
+                                &lt;/div>
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input disable -->
+                    
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;input class="input-field" disabled placeholder="Disabled" type="text" />
+                            &lt;/div>
+                        &lt;/div>
+                    
+                    &lt;/div>
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+</div>
+
+
+<h4 class="text-center text-purple">Character counter</h4>
+
+<div class="row">
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+
+            <div class="flex-group flex-group-responsive-s">
+                <button class="btn bg-pink">Button</button>
+                <input class="input-field input-count" />
+            </div>
+            
+        </div>
+    </div>
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+
+            <div class="flex-group flex-group-responsive-s">
+                <button class="btn bg-pink">Button</button>
+                <textarea class="input-field input-count"></textarea>
+            </div>
+
+        </div>
+    </div>
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <input class="input-field input-count" />
+        </div>
+        <div class="form-row">
+            <textarea class="input-field input-count"></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#html">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#js">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="html" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Character counter -->
+                    &lt;div class="row">
+
+                        &lt;!-- Input group responsive small device -->
+
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                    
+                                &lt;div class="flex-group flex-group-responsive-s">
+                                    &lt;button class="btn bg-pink">Button&lt;/button>
+                                    &lt;input class="input-field input-count" />
+                                &lt;/div>
+                    
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input group with Textarea responsive small device -->
+
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                    
+                                &lt;div class="flex-group flex-group-responsive-s">
+                                    &lt;button class="btn bg-pink">Button&lt;/button>
+                                    &lt;textarea class="input-field input-count">&lt;/textarea>
+                                &lt;/div>
+                    
+                            &lt;/div>
+                        &lt;/div>
+
+                        &lt;!-- Input / Teaxtarea -->
+
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;input class="input-field input-count" />
+                            &lt;/div>
+                            &lt;div class="form-row">
+                                &lt;textarea class="input-field input-count">&lt;/textarea>
+                            &lt;/div>
+                        &lt;/div>
+
+                </code>
+            </pre>
+        </div>
+        <div id="js" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init character counter
+                    $('.input-count').MA_InputCount({
+                        maxLength:150
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<h4 class="text-center text-purple">Input file</h4>
+
+<div class="row">
+    <div class="col col-n12 col-n12">
+        <div class="form-row">
+            <input class="input-file" type="file">
+        </div>
+        <div class="form-row">
+            <input class="input-file-btn" type="file">
+        </div>
+    </div>
+</div>
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#htmlInputFile">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#jsInputFile">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="htmlInputFile" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Input file -->
+                    &lt;div class="row">
+                        &lt;div class="col col-n12 col-n12">
+                            &lt;div class="form-row">
+                                &lt;input class="input-file" type="file">
+                            &lt;/div>
+                            &lt;div class="form-row">
+                                &lt;input class="input-file-btn" type="file">
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+
+                </code>
+            </pre>
+        </div>
+        <div id="jsInputFile" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init input file 
+                    $('.input-file').MA_InputFile({
+                        btnPosition: 'left',
+                        btnName: 'Choose a file',
+                        btnClass: 'bg-blue'
+                    });
+                    
+                    //Init input file whit only button
+                    $('.input-file-btn').MA_InputFile({
+                        btnName: '<i class="fas fa-folder"></i> Choose a file',
+                        btnClass: 'bg-blue',
+                        onlyButton: true
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/input-textarea.js"></script>
