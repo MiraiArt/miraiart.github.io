@@ -18,6 +18,11 @@ title: "Component - Select"
         <option value="1" selected>Option 2</option>
     </select>
 
+    <select id="selectSearch">
+        <option value="0">Option 1</option>
+        <option value="1" selected>Option 2</option>
+    </select>
+
 </div>
 
 
@@ -47,6 +52,12 @@ title: "Component - Select"
             <pre class="language-js line-numbers">
                 <code>
                     //Init select
+                    $('#select').MA_Select({
+                        btnClass: 'bg-pink',
+                        inputClass: '',
+                        menuClass: 'bg-pink'
+                    });
+                    //Init select search
                     $('#select').MA_Select({
                         btnClass: 'bg-blue',
                         inputClass: '',
