@@ -1,0 +1,64 @@
+---
+layout: default
+title: "Component - Select"
+---
+
+<h1 class="text-center text-purple">Select</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row text-center">
+
+    <select id="select">
+        <option value="0">Option 1</option>
+        <option value="1" selected>Option 2</option>
+    </select>
+
+</div>
+
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#htmlInputFile">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#jsInputFile">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="htmlInputFile" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Input file -->
+                    &lt;select id="select">
+                        &lt;option value="0">Option 1&lt;/option>
+                        &lt;option value="1" selected>Option 2&lt;/option>
+                    &lt;/select>
+
+                </code>
+            </pre>
+        </div>
+        <div id="jsInputFile" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init select
+                    $('#select').MA_Select({
+                        btnClass: 'bg-blue',
+                        inputClass: '',
+                        menuClass: 'bg-blue',
+                        search: true
+                    });
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript" src="/js/select.js"></script>

@@ -841,6 +841,12 @@ label{
     background-color: var(--light-grey);
 }
 
+/* --- Label --- */
+
+label.label-row{
+    display: block;
+}
+
 /* --- Input / Textarea --- */
 
 .input-field{
@@ -890,20 +896,23 @@ textarea.input-field{
 }
 
 .checkbox-container.checkbox-circle{
-    border-radius: 15px;
+    border-radius: 50px;
 }
 
 .checkbox-container:after{
+    content: '';
+    width: 12px;
+    height: 7px;
     position: absolute;
-    font-family: 'Font Awesome 5 Pro','Font Awesome 5 Free';
-    font-weight: 300;
-    content: "\f00c";
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 4px;
+    left: 3px;
+    border: 2px solid var(--black);
+    border-top: none;
+    border-right: none;
+    background: transparent;
     opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     transition: .3s opacity;
 }
 
@@ -937,20 +946,23 @@ textarea.input-field{
 }
 
 .radiobox-container.radiobox-circle{
-    border-radius: 15px;
+    border-radius: 50px;
 }
 
 .radiobox-container:after{
+    content: '';
+    width: 12px;
+    height: 7px;
     position: absolute;
-    font-family: 'Font Awesome 5 Pro' ,'Font Awesome 5';
-    font-weight: 300;
-    content: "\f00c";
-    text-align: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 4px;
+    left: 3px;
+    border: 2px solid var(--black);
+    border-top: none;
+    border-right: none;
+    background: transparent;
     opacity: 0;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
     transition: .3s opacity;
 }
 
@@ -3110,7 +3122,7 @@ textarea.input-field{
 }
 
 .select-container{
-    display: inline;
+    display: inline-block;
     position: relative;
 }
 
@@ -4338,62 +4350,70 @@ textarea.input-field{
 
 /* - Border - */
 
-.checkbox-container.border-orange{
-    color: var(--orange)!important;
+[class*="bg-"].checkbox-container:after{
+    border-color: var(--white)!important;
 }
 
-.checkbox-container.border-red{
-    color: var(--red)!important;
+.checkbox-container.border-orange:after{
+    border-color: var(--orange)!important;
 }
 
-.checkbox-container.border-pink{
-    color: var(--pink)!important;
+.checkbox-container.border-red:after{
+    border-color: var(--red)!important;
 }
 
-.checkbox-container.border-purple{
-    color: var(--purple)!important;
+.checkbox-container.border-pink:after{
+    border-color: var(--pink)!important;
 }
 
-.checkbox-container.border-blue{
-    color: var(--blue)!important;
+.checkbox-container.border-purple:after{
+    border-color: var(--purple)!important;
 }
 
-.checkbox-container.border-green{
-    color: var(--green)!important;
+.checkbox-container.border-blue:after{
+    border-color: var(--blue)!important;
 }
 
-.checkbox-container.border-black{
-    color: var(--black)!important;
+.checkbox-container.border-green:after{
+    border-color: var(--green)!important;
+}
+
+.checkbox-container.border-black:after{
+    border-color: var(--black)!important;
 }
 
 /* - Border - */
 
-.radiobox-container.border-orange{
-    color: var(--orange)!important;
+[class*="bg-"].radiobox-container:after{
+    border-color: var(--white)!important;
 }
 
-.radiobox-container.border-red{
-    color: var(--red)!important;
+.radiobox-container.border-orange:after{
+    border-color: var(--orange)!important;
 }
 
-.radiobox-container.border-pink{
-    color: var(--pink)!important;
+.radiobox-container.border-red:after{
+    border-color: var(--red)!important;
 }
 
-.radiobox-container.border-purple{
-    color: var(--purple)!important;
+.radiobox-container.border-pink:after{
+    border-color: var(--pink)!important;
 }
 
-.radiobox-container.border-blue{
-    color: var(--blue)!important;
+.radiobox-container.border-purple:after{
+    border-color: var(--purple)!important;
 }
 
-.radiobox-container.border-green{
-    color: var(--green)!important;
+.radiobox-container.border-blue:after{
+    border-color: var(--blue)!important;
 }
 
-.radiobox-container.border-black{
-    color: var(--black)!important;
+.radiobox-container.border-green:after{
+    border-color: var(--green)!important;
+}
+
+.radiobox-container.border-black:after{
+    border-color: var(--black)!important;
 }
 
 /* --- Switch --- */
