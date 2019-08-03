@@ -317,7 +317,7 @@
 
         //Sidenav event open / hide
         var sidenavBtnToggle = $('[data-target="sidenav"][data-href="#' + $(_thisElem).attr('id') + '"]');
-        sidenavBtnToggle.on('click', () => { sidenavPluginBtnEvent(event.currentTarget, settings) });
+        sidenavBtnToggle.on('click', (event) => { sidenavPluginBtnEvent(event.currentTarget, settings) });
 
         if($(_thisElem).hasClass('sidenav-fixed')){
             $('body').addClass('body-with-sidenav');

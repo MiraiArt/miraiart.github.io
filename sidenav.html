@@ -1,0 +1,107 @@
+---
+layout: default
+title: "Page - Sidenav"
+---
+
+<h1 class="text-center text-purple">Sidenav</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p>The sidenav can be hiding all the time, or show on large screen size with <code class="language-markup">sidenav-fixed</code> class and hidden on small screen size.</p>
+    </blockquote>
+</div>
+
+<h4 class="text-center text-purple">Colored tab</h4>
+
+<div class="form-row text-center">
+    <a class="btn bg-blue" data-target="sidenav" data-href="#sidenavDemo" href="javascript:void(0);">Open sidenav menu</a>
+</div>
+    
+<nav id="sidenavDemo" class="sidenav bg-blue">
+    <div class="sidenav-head">
+        <a class="sidenav-logo" href="#"><img src="/img/logo-text.png"></a>
+    </div>
+    <div class="sidenav-body">
+        <ul class="sidenav-menu">
+            <li class="sidenav-item"><a class="sidenav-link" href="#">Home</a></li>
+            <li class="sidenav-item sidenav-submenu-ctn">
+                <a class="sidenav-link" href="javascript:void(0);">Menu 1</a>
+                <ul class="sidenav-submenu">
+                    <li><a class="sidenav-submenu-link disabled" href="#">Item 1</a></li>
+                    <li><a class="sidenav-submenu-link active" href="#">Item 2</a></li>
+                    <li><a class="sidenav-submenu-link" href="#">Item 2</a></li>
+                </ul>
+            </li>
+            <li class="sidenav-item sidenav-submenu-ctn">
+                <a class="sidenav-link active" href="javascript:void(0);">Menu 2</a>
+                <ul class="sidenav-submenu active">
+                    <li><a class="sidenav-submenu-link disabled" href="#">Item 1</a></li>
+                    <li><a class="sidenav-submenu-link " href="#">Item 2</a></li>
+                </ul>
+            </li>
+            <li class="sidenav-item"><a class="sidenav-link disabled" href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="form-row">
+
+    <ul class="tab-menu bg-orange MA-tabs">
+        <li class="tab-menu-item"><a class="active" href="javascript:void(0);" data-href="#html">HTML</a></li>
+        <li class="tab-menu-item"><a href="javascript:void(0);" data-href="#js">JS</a></li>
+    </ul>
+
+    <div class="tab-body">
+
+        <div id="html" class="tab-body-content show">
+            <pre class="language-markup line-numbers">
+                <code>
+
+                    &lt;!-- Sidenav -->
+
+                    &lt;a class="btn bg-blue" data-target="sidenav" data-href="#sidenavDemo" href="javascript:void(0);">Open sidenav menu&lt;/a>
+
+                    &lt;nav id="sidenavDemo" class="sidenav bg-blue">
+                        &lt;div class="sidenav-head">
+                            &lt;a class="sidenav-logo" href="#">&lt;img src="/img/logo-text.png">&lt;/a>
+                        &lt;/div>
+                        &lt;div class="sidenav-body">
+                            &lt;ul class="sidenav-menu">
+                                &lt;li class="sidenav-item">&lt;a class="sidenav-link" href="#">Home&lt;/a>&lt;/li>
+                                &lt;li class="sidenav-item sidenav-submenu-ctn">
+                                    &lt;a class="sidenav-link" href="javascript:void(0);">Menu 1&lt;/a>
+                                    &lt;ul class="sidenav-submenu">
+                                        &lt;li>&lt;a class="sidenav-submenu-link disabled" href="#">Item 1&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a class="sidenav-submenu-link active" href="#">Item 2&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a class="sidenav-submenu-link" href="#">Item 2&lt;/a>&lt;/li>
+                                    &lt;/ul>
+                                &lt;/li>
+                                &lt;li class="sidenav-item sidenav-submenu-ctn">
+                                    &lt;a class="sidenav-link active" href="javascript:void(0);">Menu 2&lt;/a>
+                                    &lt;ul class="sidenav-submenu active">
+                                        &lt;li>&lt;a class="sidenav-submenu-link disabled" href="#">Item 1&lt;/a>&lt;/li>
+                                        &lt;li>&lt;a class="sidenav-submenu-link " href="#">Item 2&lt;/a>&lt;/li>
+                                    &lt;/ul>
+                                &lt;/li>
+                                &lt;li class="sidenav-item">&lt;a class="sidenav-link disabled" href="#">Contact&lt;/a>&lt;/li>
+                            &lt;/ul>
+                        &lt;/div>
+                    &lt;/nav>
+
+                </code>
+            </pre>
+        </div>
+        <div id="js" class="tab-body-content">
+            <pre class="language-js line-numbers">
+                <code>
+                    //Init sidenav
+                    $('#sidenavDemo').MA_Sidenav();
+                </code>
+            </pre>
+        </div>
+
+    </div>
+
+</div>
+<script type="text/javascript" src="/js/sidenav.js"></script>

@@ -1,0 +1,90 @@
+---
+layout: default
+title: "Utilities - Clearfix / Float"
+---
+
+<h1 class="text-center text-purple">Clearfix / Float</h1>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<h4 class="text-purple text-center">Float without clearfix</h4>
+
+<div class="form-row">
+
+    <div class="card m-bottom-15">
+        <div class="card-body bg-pink">
+            <div class="float-left">Float left</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body bg-pink">
+            <div class="float-right">Float right</div>
+        </div>
+    </div>
+
+</div>
+
+<h4 class="text-purple text-center">Float with clearfix</h4>
+
+<div class="form-row">
+
+    <div class="card m-bottom-15">
+        <div class="card-body bg-pink clearfix">
+            <div class="float-left">Float left</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body bg-pink clearfix">
+            <div class="float-right">Float right</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="form-row">
+
+    <div class="card">
+        <div class="card-head bg-orange">HTML</div>
+        <div class="card-body">
+            <pre class="language-markup line-numbers">
+                <code>
+                    
+                    &lt;!-- Float without clearfix -->
+                    &lt;div class="card">
+                        &lt;div class="card-body bg-pink">
+                            &lt;div class="float-left">Float left&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    
+                    &lt;div class="card">
+                        &lt;div class="card-body bg-pink">
+                            &lt;div class="float-right">Float right&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+
+                    &lt;!-- Float with clearfix -->
+                    &lt;div class="card m-bottom-15">
+                        &lt;div class="card-body bg-pink clearfix">
+                            &lt;div class="float-left">Float left&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    
+                    &lt;div class="card">
+                        &lt;div class="card-body bg-pink clearfix">
+                            &lt;div class="float-right">Float right&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    
+                </code>
+            </pre>
+        </div>
+    </div>
+
+
+</div>

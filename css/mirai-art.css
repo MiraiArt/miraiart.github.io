@@ -2790,6 +2790,11 @@ textarea.input-field{
     border-radius: 0 0 14px 14px;
 }
 
+
+.card > :only-child{
+    border-radius: 14px;
+}
+
 .card .card-head,
 .card .card-body,
 .card .card-foot{
@@ -3570,6 +3575,10 @@ textarea.input-field{
 
 .text-black{
     color: var(--black)!important;
+}
+
+.text-white{
+    color: var(--white)!important;
 }
 
 /* --- INPUT --- */

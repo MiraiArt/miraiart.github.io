@@ -13,3 +13,17 @@ pre{
 .header-demo{
     position: relative;
 }
+
+.lt-block{
+    height: 25px;
+    width: 50px;
+    height: 20px;
+    display: inline-block;
+    width: 50px;
+    border: 1px solid transparent;
+}
+
+.grid .col{
+    border-radius: 5px;
+    padding: 5px 10px;
+}
