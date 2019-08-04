@@ -581,6 +581,7 @@
         var body = $('body');
         var toastContainer = $('#toastContainer');
         var toast = $('<div class="toast ' + settings.class + '"></div>');
+        
 
         if (toastContainer.length == 0){
             toastContainer = $('<div id="toastContainer"></div>');
@@ -1108,6 +1109,7 @@
     };
 
     var accordionPlugin = (_thisElem, settings) => {
+        
         $(_thisElem).find('.accordion-head').on('click', () => { accordionToggleEvent($(event.currentTarget), settings) });
 
         //Display if active
@@ -1120,7 +1122,7 @@
                 display: 'block',
                 paddingTop: paddingTop + 'px',
                 paddingBottom: paddingBottom + 'px',
-                height: (parseInt($(this).css('line-height')) + paddingTop + paddingBottom) + 'px',
+                height: 'auto'
             });
 
         });
@@ -1152,6 +1154,11 @@
 
             var paddingTop = parseInt(accordionBody.css('padding-top'));
             var paddingBottom = parseInt(accordionBody.css('padding-bottom'));
+            
+            var baseHeight = accordionBody.height();
+            accordionBody.css('height', 'auto');
+            var autoHeight = accordionBody.height();
+            accordionBody.css('height', baseHeight);
 
             accordionBody.css({
                 display: 'block',
@@ -1162,9 +1169,10 @@
             accordionBody.animate({
                 paddingTop: paddingTop,
                 paddingBottom: paddingBottom,
-                height: (parseInt(accordionBody.css('line-height')) + paddingTop + paddingBottom),
+                height: (autoHeight + paddingTop + paddingBottom),
             }, settings.transitionDuration, function () {
                 accordionItem.addClass('active');
+                accordionBody.css('height', 'auto');
             });
         }
 

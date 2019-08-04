@@ -2,7 +2,8 @@ pre{
     white-space: pre!important;
 }
 
-.blockquote .language-markup{
+.blockquote .language-markup,
+table td .language-markup{
     background-color: var(--dark-grey);
 }
 
@@ -24,6 +25,7 @@ pre{
 }
 
 .grid .col{
-    border-radius: 5px;
     padding: 5px 10px;
+    border: 1px solid black!important;
+    height: 30px;
 }

@@ -11,15 +11,23 @@ title: "Page - Grid"
     </blockquote>
 </div>
 
+<h4 class="text-center text-purple">Columns in wrapper</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
     
         <div class="wrapper">
             <div class="row p-top-15">
-                <div class="col col-n12 bg-pink">col-n12</div>
-                <div class="col col-n6 bg-purple">col-n6</div>
-                <div class="col col-n6 bg-red">col-n6</div>
+                <div class="col col-s12 bg-pink"></div>
+                <div class="col col-s6 bg-purple"></div>
+                <div class="col col-s6 bg-red"></div>
             </div>
         </div>
 
@@ -34,7 +42,14 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Col with wrapper -->
+                    &lt;div class="wrapper">
+                        &lt;div class="row">
+                            &lt;div class="col col-s12">&lt;/div>
+                            &lt;div class="col col-s6">&lt;/div>
+                            &lt;div class="col col-s6">&lt;/div>
+                        &lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
@@ -42,14 +57,21 @@ title: "Page - Grid"
     </div>
 </div>
 
+<h4 class="text-center text-purple">Small & medium columns</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
 
         <div class="row p-top-15">
-            <div class="col col-s12 col-m6 col-l4 bg-pink">col-n12</div>
-            <div class="col col-s12 col-m6 col-l4 bg-purple">col-n6</div>
-            <div class="col col-s12 col-m12 col-l4 bg-red">col-n6</div>
+            <div class="col col-s12 col-m7 bg-pink"></div>
+            <div class="col col-s12 col-m5 bg-purple"></div>
         </div>
 
     </div>
@@ -63,7 +85,11 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Col small / medium -->
+                    &lt;div class="row">
+                        &lt;div class="col col-s12 col-m7">&lt;/div>
+                        &lt;div class="col col-s12 col-m5">&lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
@@ -71,13 +97,22 @@ title: "Page - Grid"
     </div>
 </div>
 
+<h4 class="text-center text-purple">Small, medium & large columns</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
 
         <div class="row p-top-15">
-            <div class="col col-n6 bg-pink">col-n6</div>
-            <div class="col col-n6 bg-purple">col-n6</div>
+            <div class="col col-s12 col-m6 col-l4 bg-pink"></div>
+            <div class="col col-s12 col-m6 col-l4 bg-purple"></div>
+            <div class="col col-s12 col-m12 col-l4 bg-red"></div>
         </div>
 
     </div>
@@ -91,7 +126,12 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Col small / medium / large -->
+                    &lt;div class="row">
+                        &lt;div class="col col-s12 col-m6 col-l4">&lt;/div>
+                        &lt;div class="col col-s12 col-m6 col-l4">&lt;/div>
+                        &lt;div class="col col-s12 col-m12 col-l4">&lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
@@ -99,13 +139,22 @@ title: "Page - Grid"
     </div>
 </div>
 
+<h4 class="text-center text-purple">Small & very large columns</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
 
         <div class="row p-top-15">
-            <div class="col col-s12 col-n6 bg-pink">col-s12 col-n6</div>
-            <div class="col col-s12 col-n6 bg-purple">col-s12 col-n6</div>
+            <div class="col col-s12 col-vl4 bg-pink"></div>
+            <div class="col col-s12 col-vl4 bg-purple"></div>
+            <div class="col col-s12 col-vl4 bg-purple"></div>
         </div>
 
     </div>
@@ -119,7 +168,12 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Col very large -->
+                    &lt;div class="row">
+                        &lt;div class="col col-s12 col-vl4">&lt;/div>
+                        &lt;div class="col col-s12 col-vl4">&lt;/div>
+                        &lt;div class="col col-s12 col-vl4">&lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
@@ -127,23 +181,31 @@ title: "Page - Grid"
     </div>
 </div>
 
+<h4 class="text-center text-purple">Multiple columns</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
 
         <div class="row p-top-15">
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
-            <div class="col col-s12 col-l1 bg-pink">col-l1</div>
-            <div class="col col-s12 col-l1 bg-purple">col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-pink">col-s12 col-l1</div>
+            <div class="col col-s12 col-l1 bg-purple">col-s12 col-l1</div>
         </div>
 
     </div>
@@ -157,7 +219,21 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Multiple columns -->
+                    &lt;div class="row">
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                        &lt;div class="col col-s12 col-l1">&lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
@@ -165,14 +241,22 @@ title: "Page - Grid"
     </div>
 </div>
 
+<h4 class="text-center text-purple">Offset column</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
 <div class="card m-bottom-15 grid">
 
     <div class="card-body">
 
         <div class="row p-top-15">
-            <div class="col col-s12 col-l6 bg-pink">col-s12 col-l6</div>
-            <div class="col col-s12 col-l6 bg-purple">col-s12 col-l6</div>
-            <div class="col col-s12 offset-m6 bg-red">col-s12 offset-m6 col-n6</div>
+            <div class="col col-s12 col-l6 bg-pink"></div>
+            <div class="col col-s12 col-l6 bg-purple"></div>
+            <div class="col col-s12 offset-l6 col-l6 bg-red"></div>
         </div>
 
     </div>
@@ -186,10 +270,74 @@ title: "Page - Grid"
             <pre class="language-markup line-numbers">
                 <code>
 
-                    &lt;!-- Header -->
+                    &lt;!-- Col offset -->
+                    &lt;div class="row">
+                        &lt;div class="col col-s12 col-l6">&lt;/div>
+                        &lt;div class="col col-s12 col-l6">&lt;/div>
+                        &lt;div class="col col-s12 offset-l6 col-l6">&lt;/div>
+                    &lt;/div>
 
                 </code>
             </pre>
         </div>
     </div>
+</div>
+
+<h4 class="text-center text-purple">Grid infos</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <div class="responsive-table">
+
+        <table class="table table-center table-striped">
+            <thead class="thead bg-red">
+                <tr>
+                    <th></th>
+                    <th>Small screen<br><= 600</th>
+                    <th>Medium screen<br>> 600</th>
+                    <th>Large screen<br>>= 992</th>
+                    <th>Very large screen<br>>= 1200</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody no-tfoot">
+                <tr>
+                    <td><b>Wrapper width %</b></td>
+                    <td>90 %</td>
+                    <td>80%</td>
+                    <td>70%</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td><b>Col class prefix</b></td>
+                    <td><code class="language-markup">.col-s</code></td>
+                    <td><code class="language-markup">.col-m</code></td>
+                    <td><code class="language-markup">.col-l</code></td>
+                    <td><code class="language-markup">.col-vl</code></td>
+                </tr>
+                <tr>
+                    <td><b>Offset class prefix</b></td>
+                    <td><code class="language-markup">.offset-s</code></td>
+                    <td><code class="language-markup">.offset-s</code></td>
+                    <td><code class="language-markup">.offset-s</code></td>
+                    <td><code class="language-markup">.offset-s</code></td>
+                </tr>
+                <tr>
+                    <td><b>Number of colums</b></td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                    <td>12</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
 </div>
