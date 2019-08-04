@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Component - Alert"
+title: "Javascript - Alert"
 ---
 
 <h1 class="text-center text-purple">Alert</h1>
@@ -29,25 +29,23 @@ title: "Component - Alert"
                     
                     //Init alert
                     $.MA_Alert({
-                        message: 'Le champs est invalide.&lt;br>Veuillez entré une valeur .',
-                        title: '&lt;i class="fal fa-exclamation-triangle">&lt;/i> Attention !',
-                        classContainer: 'dqz',
-                        classBackground: '',
+                        message: 'Please defined a value !',
+                        title: '&lt;i class="fas fa-exclamation-triangle">&lt;/i> Error !',
                         classHead: 'bg-purple',
                         backgroundClose: false,
                         closeBtn: true,
                         closeIcon: '&lt;i class="fab fa-times">&lt;/i>',
                         buttons: {
                             btnClose: {
-                            class: 'bg-blue',
-                            name:'dqzdq',
-                            action: function () {
-                            }
-                        },
-                        btnRemove: {
-                            class: 'bg-red',
-                            action: function () {
-                            }
+                                class: 'bg-blue',
+                                name:'dqzdq',
+                                action: function () {
+                                }
+                            },
+                            btnRemove: {
+                                class: 'bg-red',
+                                action: function () {
+                                }
                             }
                         }
                     });
@@ -58,5 +56,53 @@ title: "Component - Alert"
     </div>
 
 </div>
+
+<h4 class="text-center text-purple">Options</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <div class="responsive-table">
+
+        <table class="table table-center table-striped">
+            <thead class="thead bg-red">
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody no-tfoot">
+                <tr>
+                    <td><b>transitionDuration</b></td>
+                    <td>Number</td>
+                    <td>500</td>
+                    <td>It's transition duration for the alert when it's open or close, in milliseconds.</td>
+                </tr>
+                <tr>
+                    <td><b>title</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's alert title.</td>
+                </tr>
+                <tr>
+                    <td><b>message</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's message display in alert.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
 
 <script type="text/javascript" src="/js/alert.js"></script>

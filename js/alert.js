@@ -1,10 +1,8 @@
 $(function () {
     $('.btn-show-alert').on('click', () => {
         $.MA_Alert({
-            message: 'Le champs est invalide.<br>Veuillez entré une valeur .',
-            title: '<i class="fas fa-exclamation-triangle"></i> Attention !',
-            classContainer: 'dqz',
-            classBackground: '',
+            message: 'Please defined a value !',
+            title: '<i class="fas fa-exclamation-triangle"></i> Error !',
             classHead: 'bg-purple',
             backgroundClose: false,
             closeIcon: '<i class="fas fa-times"></i>',
