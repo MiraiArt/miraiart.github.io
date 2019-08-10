@@ -13,30 +13,40 @@
 
     $.fn.MA_imgZoom = function (options) {
 
-        var defaults = {
-            imgZoomContainerClass: '',
-            imgZoomWidgetClass: '',
-            imgZoomSliderClass: '',
-            imgItemSlideClass: '',
-            imgItemWrapperClass: '',
-            imgItemDescriptionClass: '',
-            button : {
-                arrowLeft: {
-                    name: 'Prev',
-                    class: 'bg-blue',
-                },
-                arrowRight: {
-                    name: 'Next',
-                    class: 'bg-blue',
-                },
-                close: {
-                    name: 'Close',
-                    class: 'bg-blue',
-                }
-            }
-        };
+        if (typeof options === 'string') {
 
-        var settings = $.extend({}, defaults, options);
+            var settings = options;
+
+        } else {
+
+            var defaults = {
+                imgZoomContainerClass: '',
+                imgZoomWidgetClass: '',
+                imgZoomSliderClass: '',
+                imgItemSlideClass: '',
+                imgItemWrapperClass: '',
+                imgItemDescriptionClass: '',
+                button: {
+                    arrowLeft: {
+                        name: 'Prev',
+                        class: 'bg-blue',
+                    },
+                    arrowRight: {
+                        name: 'Next',
+                        class: 'bg-blue',
+                    },
+                    close: {
+                        name: 'Close',
+                        class: 'bg-blue',
+                    }
+                }
+            };
+
+            var settings = $.extend({}, defaults, options);
+
+        }
+
+
         initPlugin(this, settings, 'imgZoom');
     };
 
@@ -225,16 +235,24 @@
 
     $.fn.MA_Progress = function (options) {
 
-        var defaults = {
-            transitionDuration: 500,
-            startAt: '0%',
-            endAt: '100%',
-            hideAtEnd: true,
-            onStart: function () {},
-            onEnd: function () {}
-        };
+        if (typeof options === 'string') {
 
-        var settings = $.extend({}, defaults, options);
+            var settings = options;
+
+        } else {
+
+            var defaults = {
+                transitionDuration: 500,
+                startAt: '0%',
+                endAt: '100%',
+                hideAtEnd: true,
+                onStart: function () { },
+                onEnd: function () { }
+            };
+
+            var settings = $.extend({}, defaults, options);
+
+        }
 
         initPlugin(this, settings, 'progress');
     };
@@ -258,7 +276,9 @@
                 break;
 
             case 'imgZoom':
+
                 imgZoomPlugin(_thisElem, settings);
+
                 break;
 
             case 'tabs':
@@ -414,15 +434,83 @@
 
         var imgLinked = $(_thisElem).attr('data-group');
 
-        if (imgLinked){
+        if (imgLinked) {
             var _imgElems = $('img[data-group="' + imgLinked + '"]');
-        }else{
+        } else {
             var _imgElems = $(_thisElem);
         }
         
-        $(_thisElem).addClass('img-zoom');
+        if (typeof settings !== 'string') {
+
+            $(_imgElems).each(function (index, element) {
+
+                var _thisImg = $(this);
+                var thisImgSettings = settings;
+
+                //imgZoom dataHtml
+                if (_thisImg.attr('data-imgZoomContainerClass'))
+                    thisImgSettings.imgZoomContainerClass = _thisImg.attr('data-imgZoomContainerClass');
+
+                if (_thisImg.attr('data-imgZoomWidgetClass'))
+                    thisImgSettings.imgZoomWidgetClass = _thisImg.attr('data-imgZoomWidgetClass');
+
+                if (_thisImg.attr('data-imgZoomSliderClass'))
+                    thisImgSettings.imgZoomSliderClass = _thisImg.attr('data-imgZoomSliderClass');
+
+                if (_thisImg.attr('data-imgItemSlideClass'))
+                    thisImgSettings.imgItemSlideClass = _thisImg.attr('data-imgItemSlideClass');
+
+                if (_thisImg.attr('data-imgItemWrapperClass'))
+                    thisImgSettings.imgItemWrapperClass = _thisImg.attr('data-imgItemWrapperClass');
+
+                if (_thisImg.attr('data-imgItemDescriptionClass'))
+                    thisImgSettings.imgItemDescriptionClass = _thisImg.attr('data-imgItemDescriptionClass');
+
+
+                _thisImg[0].settings = thisImgSettings;
+
+                _thisImg.addClass('img-zoom');
+
+                _thisImg.off('click.imgZoom')
+                _thisImg.on('click.imgZoom', (event) => { imgZoomDisplayEvent(event.currentTarget, thisImgSettings, _imgElems) });
+                 
+            });
+
+        } else {
+
+            switch (settings) {
+                case 'open':
+
+                    $(_thisElem).trigger('click.imgZoom');
+
+                    break;
+
+                case 'close':
+                    
+                    if (typeof _thisElem.imgZoomContainer !== 'undefined'){
+
+                        imgZoomCloseEvent(_thisElem.imgZoomContainer, _thisElem.settings, _imgElems);
+                        
+                    }
+
+                    break;
+
+                case 'destroy':
+
+                    if (typeof _thisElem.imgZoomContainer !== 'undefined') {
+
+                        imgZoomCloseEvent(_thisElem.imgZoomContainer, _thisElem.settings, _imgElems);
+
+                    }
+                    _imgElems.off('click.imgZoom');
+                    _imgElems.removeClass('img-zoom');
+
+                    break;
+            }
+
+        }
+
         
-        $(_thisElem).on('click', () => { imgZoomDisplayEvent(event.currentTarget, settings, _imgElems) });
 
     };
 
@@ -433,6 +521,10 @@
         var imgZoomWidget = $('<div class="img-zoom-widget ' + settings.imgZoomWidgetClass +'"></div>');
         var imgZoomSlider = $('<div class="img-zoom-slider ' + settings.imgZoomSliderClass +'"></div>');
         var btnClose = $('<a href="javascript:void(0);" class="btn img-zoom-close ' + settings.button.close.class + '">' + settings.button.close.name + '</a>');
+        
+        $(_imgElems).each(function (index, element) {
+            $(this)[0].imgZoomContainer = imgZoomContainer;
+        });
 
         imgZoomWidget.append(imgZoomSlider);
         imgZoomContainer.append(imgZoomWidget);
@@ -487,17 +579,26 @@
             imgZoomSlider.append(imgSlide);
         });
 
-        btnClose.on('click', () => { imgZoomCloseEvent(event.currentTarget, settings) });
+        btnClose.on('click', () => { imgZoomCloseEvent(event.currentTarget, settings, _imgElems) });
 
     };
 
-    var imgZoomCloseEvent = (_thisElem, settings) => {
-        var imgZoomContainer = $(_thisElem).parents('.img-zoom-container');
+    var imgZoomCloseEvent = (_thisElem, settings, _imgElems) => {
+
+        if ($(_thisElem).hasClass('img-zoom-container')){
+            var imgZoomContainer = $(_thisElem);
+        }else{
+            var imgZoomContainer = $(_thisElem).parents('.img-zoom-container');
+        }
+        
         imgZoomContainer.animate({
             opacity: 0
         },
         450, function () {
             imgZoomContainer.remove();
+            $(_imgElems).each(function (index, element) {
+                delete $(this)[0].imgZoomContainer;
+            });
         });
     };
 

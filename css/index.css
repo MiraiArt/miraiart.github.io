@@ -7,6 +7,11 @@ table td .language-markup{
     background-color: var(--dark-grey);
 }
 
+.blockquote .language-js,
+table td .language-js{
+    padding: 5px;
+}
+
 .body-content{
     min-height: 100vh;
 }
