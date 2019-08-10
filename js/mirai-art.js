@@ -14,6 +14,12 @@
     $.fn.MA_imgZoom = function (options) {
 
         var defaults = {
+            imgZoomContainerClass: '',
+            imgZoomWidgetClass: '',
+            imgZoomSliderClass: '',
+            imgItemSlideClass: '',
+            imgItemWrapperClass: '',
+            imgItemDescriptionClass: '',
             button : {
                 arrowLeft: {
                     name: 'Prev',
@@ -229,6 +235,7 @@
         };
 
         var settings = $.extend({}, defaults, options);
+
         initPlugin(this, settings, 'progress');
     };
     
@@ -307,6 +314,20 @@
                 break;
 
             case 'progress':
+
+                //Progress bar dataHtml
+                if ($(_thisElem).attr('data-transitionDuration'))
+                    settings.transitionDuration = parseInt($(_thisElem).attr('data-transitionDuration'));
+
+                if ($(_thisElem).attr('data-startAt'))
+                    settings.startAt = $(_thisElem).attr('data-startAt');
+
+                if ($(_thisElem).attr('data-endAt'))
+                    settings.endAt = $(_thisElem).attr('data-endAt');
+
+                if ($(_thisElem).attr('data-hideAtEnd'))
+                    settings.hideAtEnd = JSON.parse($(_thisElem).attr('data-hideAtEnd'));
+
                 progressPlugin(_thisElem, settings);
                 break;
         }
@@ -408,9 +429,9 @@
     var imgZoomDisplayEvent = (_thisElem, settings, _imgElems) => {
 
         var body = $('body');
-        var imgZoomContainer = $('<div class="img-zoom-container"></div>');
-        var imgZoomWidget = $('<div class="img-zoom-widget"></div>');
-        var imgZoomSlider = $('<div class="img-zoom-slider"></div>');
+        var imgZoomContainer = $('<div class="img-zoom-container ' + settings.imgZoomContainerClass +'"></div>');
+        var imgZoomWidget = $('<div class="img-zoom-widget ' + settings.imgZoomWidgetClass +'"></div>');
+        var imgZoomSlider = $('<div class="img-zoom-slider ' + settings.imgZoomSliderClass +'"></div>');
         var btnClose = $('<a href="javascript:void(0);" class="btn img-zoom-close ' + settings.button.close.class + '">' + settings.button.close.name + '</a>');
 
         imgZoomWidget.append(imgZoomSlider);
@@ -444,7 +465,7 @@
 
             var classImgSlide = '';
 
-            var imgSlide = $('<div class="img-zoom-slide"></div>');
+            var imgSlide = $('<div class="img-zoom-slide ' + settings.imgItemSlideClass +'"></div>');
 
             if (_thisElem == element){
                 imgSlide.css('opacity', 1);
@@ -453,8 +474,8 @@
             
             
             var img = $('<img src="' + $(this).attr('src') + '"/>');
-            var imgWrapper = $('<div class="img-zoom-img-wrapper"></div>')
-            var imgDescription = $('<div class="img-zoom-description"><p>' + $(this).attr('data-description') + '</p></div>');
+            var imgWrapper = $('<div class="img-zoom-img-wrapper ' + settings.imgItemWrapperClass +'"></div>')
+            var imgDescription = $('<div class="img-zoom-description ' + settings.imgItemDescriptionClass +'"><p>' + $(this).attr('data-description') + '</p></div>');
 
             imgWrapper.append(img)
             imgSlide.append(imgWrapper);
@@ -701,8 +722,6 @@
             
         }
         
-
-
     };
 
     var modalCloseEvent = (modalBackground, modalContainer, settings) => {
@@ -1273,23 +1292,39 @@
 
     };
 
+    //MA_Progress
     var progressPlugin = (_thisElem, settings) => {
 
-        $(_thisElem).find('.progress').css('width', settings.startAt);
-        $(_thisElem).removeClass('hide');
+        if (typeof settings !== 'string') {
 
-        settings.onStart.call(_thisElem);
+            //Set elem settings
+            _thisElem.settings = settings;
 
-        $(_thisElem).find('.progress').animate({
-            width: settings.endAt
-        }, settings.transitionDuration, function () {
+            //Set progress start width
+            $(_thisElem).find('.progress').css('width', settings.startAt);
 
-            settings.onEnd.call(_thisElem);
-            if (settings.hideAtEnd){
-                $(_thisElem).addClass('hide');
-            }
+            //Display progress
+            $(_thisElem).removeClass('hide');
 
-        });
+            //Call progess settings onStart
+            settings.onStart.call(_thisElem);
+
+            //Animate progess
+            $(_thisElem).find('.progress').animate({
+                width: settings.endAt
+            }, settings.transitionDuration, function () {
+
+                //Call progess settings onEnd
+                settings.onEnd.call(_thisElem);
+
+                //Hide progress if hideAtEnd set to true
+                if (settings.hideAtEnd) {
+                    $(_thisElem).addClass('hide');
+                }
+
+            });
+
+        }
         
     };
 

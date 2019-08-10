@@ -89,7 +89,8 @@ title: "Javascript - Progress bar / Loader"
         <table class="table table-center table-striped">
             <thead class="thead bg-red">
                 <tr>
-                    <th>Name</th>
+                    <th>Json name</th>
+                    <th>Html attr. name</th>
                     <th>Type</th>
                     <th>Default value</th>
                     <th>Description</th>
@@ -99,27 +100,45 @@ title: "Javascript - Progress bar / Loader"
             <tbody class="tbody no-tfoot">
                 <tr>
                     <td><b>transitionDuration</b></td>
+                    <td><b>data-transitionDuration</b></td>
                     <td>Number</td>
                     <td>500</td>
                     <td>It's duration for progress bar, in milliseconds.</td>
                 </tr>
                 <tr>
                     <td><b>startAt</b></td>
+                    <td><b>data-startAt</b></td>
                     <td>Number</td>
                     <td>0%</td>
                     <td>Start width of progress bar.</td>
                 </tr>
                 <tr>
                     <td><b>endAt</b></td>
+                    <td><b>data-endAt</b></td>
                     <td>Number</td>
                     <td>100%</td>
                     <td>End width of progress bar.</td>
                 </tr>
                 <tr>
                     <td><b>hideAtEnd</b></td>
+                    <td><b>data-hideAtEnd</b></td>
                     <td>Boolean</td>
                     <td>true</td>
                     <td>Hide progress bar when it's finished to load.</td>
+                </tr>
+                <tr>
+                    <td><b>onStart</b></td>
+                    <td>null</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function call when progress bar started.</td>
+                </tr>
+                <tr>
+                    <td><b>onEnd</b></td>
+                    <td>null</td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>Function call when progress bar finished.</td>
                 </tr>
             </tbody>
         </table>
