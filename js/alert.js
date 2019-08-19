@@ -5,7 +5,6 @@ $(function () {
             title: '<i class="fas fa-exclamation-triangle"></i> Error !',
             classHead: 'bg-purple',
             backgroundClose: false,
-            closeIcon: '<i class="fas fa-times"></i>',
             closeBtn: true,
             buttons: {
                 btnClose: {

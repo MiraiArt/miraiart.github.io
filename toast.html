@@ -7,7 +7,7 @@ title: "Javascript - Toast"
 
 <div class="form-row">
     <blockquote class="blockquote border-purple m-bottom-15">
-        <p></p>
+        <p>Toast it's a small message, you can display after or before an action.</p>
     </blockquote>
 </div>
 <h4 class="text-center text-purple">Colored toast</h4>
@@ -49,5 +49,83 @@ title: "Javascript - Toast"
     </div>
 
 </div>
+
+<h4 class="text-center text-purple">Options</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <div class="responsive-table">
+
+        <table class="table table-center table-striped">
+            <thead class="thead bg-red">
+                <tr>
+                    <th>Json name</th>
+                    <th>Type</th>
+                    <th>Default value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody no-tfoot">
+                <tr>
+                    <td><b>message</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's toast message, you can put HTML inside.</td>
+                </tr>
+                <tr>
+                    <td><b>class</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's class append to the toast.</td>
+                </tr>
+                <tr>
+                    <td><b>icon</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>This is icon of title for toast.</td>
+                </tr>
+                <tr>
+                    <td><b>duration</b></td>
+                    <td>Number</td>
+                    <td>3000</td>
+                    <td>It's duration of toast before fade out.</td>
+                </tr>
+                <tr>
+                    <td><b>toastClose.class<br>toastBtn.class</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's class for button of toast.</td>
+                </tr>
+                <tr>
+                    <td><b>toastClose.name<br>toastBtn.name</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's a name for button, you can put HTML if you wan't.</td>
+                </tr>
+                <tr>
+                    <td><b>toastBtn.href</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>It's possible to add a link to button.</td>
+                </tr>
+                <tr>
+                    <td><b>toastBtn.action</b></td>
+                    <td>Function</td>
+                    <td>null</td>
+                    <td>You can add action on button.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
 
 <script type="text/javascript" src="/js/toast.js"></script>
