@@ -1,3 +1,3 @@
 $(function () {
-    $('.tab-example').MA_tabs();
+    $('.tab-example').MA_Tabs();
 });

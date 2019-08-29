@@ -1,5 +1,5 @@
 $(function () {
-    $('.img-zoom-one').MA_imgZoom({
+    $('.img-zoom-one').MA_ImgZoom({
         button: {
             close: {
                 name: '<i class="fas fa-times"></i>',
@@ -7,7 +7,7 @@ $(function () {
             }
         }
     });
-    $('.img-zoom-group').MA_imgZoom({
+    $('.img-zoom-group').MA_ImgZoom({
         button: {
             arrowLeft: {
                 name: '<i class="fas fa-arrow-left"></i>',

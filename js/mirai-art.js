@@ -11,7 +11,7 @@
         initPlugin(this, settings, 'sidenav');
     };
 
-    $.fn.MA_imgZoom = function (options) {
+    $.fn.MA_ImgZoom = function (options) {
 
         if (typeof options === 'string') {
 
@@ -50,13 +50,21 @@
         initPlugin(this, settings, 'imgZoom');
     };
 
-    $.fn.MA_tabs = function (options) {
+    $.fn.MA_Tabs = function (options) {
 
-        var defaults = {
-            
-        };
+        if (typeof options === 'string') {
 
-        var settings = $.extend({}, defaults, options);
+            var settings = options;
+
+        } else {
+
+            var defaults = {
+                
+            };
+
+            var settings = $.extend({}, defaults, options);
+
+        }
         initPlugin(this, settings, 'tabs');
     };
 
@@ -510,8 +518,6 @@
 
         }
 
-        
-
     };
 
     var imgZoomDisplayEvent = (_thisElem, settings, _imgElems) => {
@@ -651,7 +657,21 @@
     };
 
     var tabsPlugin = (_thisElem, settings) => {
-        $(_thisElem).find('a:not(.disabled)').on('click', () => { tabsDisplayEvent(event.currentTarget, settings) });
+
+        if (typeof settings !== 'string') {
+            $(_thisElem).find('a:not(.disabled)').on('click.tabs', (event) => { tabsDisplayEvent(event.currentTarget, settings) });
+        } else {
+            switch (settings) {
+                case 'destroy':
+                    $(_thisElem).find('a').off('click.tabs');
+                    break;
+            
+                case 'toggle':
+                    $('a[data-href="#' + $(_thisElem).attr('id') + '"]').trigger('click.tabs');
+                    break;
+            }
+        }
+
     };
 
     var tabsDisplayEvent = (_thisElem, settings) => {
@@ -1519,13 +1539,13 @@ $(window).on('click', (event) => {
 });
 
 $('.MA-sidenav').MA_Sidenav();
-$('.MA-imgZoom').MA_imgZoom();
-$('.MA-tabs').MA_tabs();
+$('.MA-imgZoom').MA_ImgZoom();
+$('.MA-tabs').MA_Tabs();
 $('.MA-scrollTop').MA_ScrollTop();
 $('.MA-checkbox').MA_Checkbox();
 $('.MA-radiobox').MA_Radiobox();
 $('.MA-switch').MA_Switch();
-$('.MAtooltip').MA_Tooltip();
+$('.MA-tooltip').MA_Tooltip();
 $('.MA-accordion').MA_Accordion();
 $('.MA-inputCount').MA_InputCount();
-$('.MA-progress').MA_InputCount();
+$('.MA-progress').MA_Progress();
