@@ -112,6 +112,7 @@
 
             var defaults = {
                 transitionDuration: 500,
+                backgroundDismiss: true
             };
             var settings = $.extend({}, defaults, options);
 
@@ -134,7 +135,7 @@
             classFoot: '',
             transitionDuration: 500,
             backgroundClose: false,
-            closeIcon: '<i class="fas fa-times" ></i>',
+            closeIcon: "&times;",
             closeBtn: false,
             buttons: {}
             /* buttons: {
@@ -302,6 +303,11 @@
                 break;
             
             case 'modal':
+
+                //Progress modal dataHtml
+                if ($(_thisElem).attr('data-backgroundDismiss'))
+                    settings.backgroundDismiss = JSON.parse($(_thisElem).attr('data-backgroundDismiss'));
+
                 modalPlugin(_thisElem, settings);
                 break;
 
@@ -817,12 +823,16 @@
 
             //Close modal
 
-            modal.find('.modal-close').on('click', () => { modalCloseEvent(modalBackground, modalContainer, settings) });
-            modalBackground.on('click', () => { modalBackgroundCloseEvent(_thisElem, event, settings) });
+            modal.find('.modal-close').on('click.modalclose', () => { modalCloseEvent(modalBackground, modalContainer, settings) });
+
+            if (settings.backgroundDismiss){
+                modalBackground.on('click.modalclose', () => { modalBackgroundCloseEvent(_thisElem, event, settings) });
+            }
+            
 
             //Open modal
             var modalBtnToggle = $('[data-target="modal"][data-href="#' + $(_thisElem).attr('id') + '"]');
-            modalBtnToggle.on('click', () => { modalOpenEvent(modalBackground, modalContainer, settings) });
+            modalBtnToggle.on('click.modalopen', () => { modalOpenEvent(modalBackground, modalContainer, settings) });
 
         }else{
 
@@ -836,6 +846,12 @@
                 case 'close':
 
                     modalCloseEvent(modalBackground, modalContainer, modalBackground[0].settings);
+
+                    break;
+                
+                case 'destroy':
+
+                    modalDestroy(_thisElem, modalBackground, modalContainer, modalBackground[0].settings);
 
                     break;
             }
@@ -891,6 +907,18 @@
             settings.afterOpen.call(modalBackground[0]);
         });
 
+    };
+
+    var modalDestroy = (_thisElem, modalBackground, modalContainer, settings) => {
+
+        modalCloseEvent(modalBackground, modalContainer, settings);
+
+        var modalBtnToggle = $('[data-target="modal"][data-href="#' + $(_thisElem).attr('id') + '"]');
+        var modal = modalBackground.find('.modal');
+
+        modalBtnToggle.off('click.modalopen');
+        modal.find('.modal-close').off('click.modalclose');
+        modalBackground.off('click.modalclose');
     };
 
     var alertPlugin = (settings) => {

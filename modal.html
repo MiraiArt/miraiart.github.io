@@ -22,7 +22,7 @@ title: "Javascript - Modal"
         <div class="modal">
             <div class="modal-head bg-blue">
                 <h5 class="modal-title">Modal title</h5>
-                <a class="modal-close" href="javascript:void(0);"><i class="fas fa-times"></i></a>
+                <a class="modal-close" href="javascript:void(0);">&times;</a>
             </div>
             <div class="modal-body">
                 In volutpat, nunc a rutrum elementum, urna tortor suscipit felis, id dignissim nibh ante eu eros. Proin quam orci,
@@ -169,6 +169,102 @@ title: "Javascript - Modal"
 
     </div>
 
+</div>
+
+<h4 class="text-center text-purple">Options</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <div class="responsive-table">
+
+        <table class="table table-center table-striped">
+            <thead class="thead bg-red">
+                <tr>
+                    <th>Json name</th>
+                    <th>Html attr. name</th>
+                    <th>Type</th>
+                    <th>Default value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody no-tfoot">
+                <tr>
+                    <td><b>transitionDuration</b></td>
+                    <td>null</td>
+                    <td>Number</td>
+                    <td>500</td>
+                    <td>It's transition duration for showing and hidding modal.</td>
+                </tr>
+                <tr>
+                    <td><b>backgroundDismiss</b></td>
+                    <td><b>data-backgroundDismiss</b></td>
+                    <td>Boolean</td>
+                    <td>true</td>
+                    <td>If set to false modal will be not hidden on click, on background.</td>
+                </tr>
+                <tr>
+                    <td>null</td>
+                    <td><b>data-target</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>Defined button with this attribute, with value "modal", for target modal.</td>
+                </tr>
+                <tr>
+                    <td>null</td>
+                    <td><b>data-href</b></td>
+                    <td>String</td>
+                    <td>null</td>
+                    <td>Defined button with this attribute, with id of your modal.</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+<h4 class="text-center text-purple">Methods</h4>
+
+<div class="form-row">
+    <blockquote class="blockquote border-purple m-bottom-15">
+        <p></p>
+    </blockquote>
+</div>
+
+<div class="form-row">
+
+    <div class="responsive-table">
+
+        <table class="table table-center table-striped">
+            <thead class="thead bg-pink">
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+
+            <tbody class="tbody no-tfoot">
+                <tr>
+                    <td><code class="language-js">$(elem).MA_Modal('open');</code></td>
+                    <td>Open Modal</td>
+                </tr>
+                <tr>
+                    <td><code class="language-js">$(elem).MA_Modal('close');</code></td>
+                    <td>Close Modal</td>
+                </tr>
+                <tr>
+                    <td><code class="language-js">$(elem).MA_Modal('destroy');</code></td>
+                    <td>Destroy Modal</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
 </div>
 
 <script type="text/javascript" src="/js/modal.js"></script>
